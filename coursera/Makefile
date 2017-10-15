@@ -16,4 +16,4 @@ $(BUILD_DIR):
 
 clean:
 	$(MAKE) -C $(TESTDIR) $@
-	rm $(BUILDDIR)/*
+	rm $(BUILD_DIR)/*
