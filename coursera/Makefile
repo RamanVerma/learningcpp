@@ -1,15 +1,18 @@
-# compiler
 CC	:=g++
 # C++ compile flags
 CXXFLAGS:=--std=c++14
-# build directory
-BUILD_DIR:=build
+BUILDDIR:=build
+TESTDIR:=test
 
 all: $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) -o $(BUILD_DIR)/w1E1_convertToC++ w1E1_convertToC++.cc
+	$(CC) $(CXXFLAGS) -o $(BUILDDIR)/w1E1_convertToC++ w1E1_convertToC++.cc
+
+tests:
+	$(MAKE) -C $(TESTDIR) all
 
 $(BUILD_DIR):
 	mkdir -p $@
 
 clean:
-	rm $(BUILD_DIR)/*
+	rm $(BUILDDIR)/*
+	$(MAKE) -C $(TESTDIR) $@
