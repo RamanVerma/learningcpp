@@ -14,5 +14,5 @@ $(BUILD_DIR):
 	mkdir -p $@
 
 clean:
-	rm $(BUILDDIR)/*
 	$(MAKE) -C $(TESTDIR) $@
+	rm $(BUILDDIR)/*

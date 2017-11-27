@@ -1,6 +1,6 @@
 CC        := g++
 SRCDIR    := $(shell dirname `pwd`)
-CFLAGS    :=
+CXXFLAGS  := -g
 INCDIR    := -I $(SRCDIR)
 LIBS      :=
 TSTFILES  := $(wildcard *.cc)
