@@ -154,8 +154,8 @@ public:
   }
 
   /* prints the graph */
-  void print() {
-    for (auto v: vertices_) {
+  friend ostream& operator<<(ostream& out, Graph& g) {
+    for (auto v: g.vertices()) {
       cout << v << endl;
     }
   }
